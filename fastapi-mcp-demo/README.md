@@ -1,4 +1,3 @@
-
 🧠 FastAPI + MCP: Exposing AI-Ready APIs with Ease
 
 Transform your FastAPI application into an AI-native service using the Model Context Protocol (MCP).
@@ -32,8 +31,8 @@ This guide demonstrates how to:
     1.	Clone the repository:
 
 ```shell
-git clone https://github.com/yourusername/fastapi-mcp-demo.git
-cd fastapi-mcp-demo
+git clone https://github.com/Ardor-Cerebrum/ardor-ai-blog
+cd ./ardor-ai-blog/fastapi-mcp-demo
 ```
 2.	Create and activate a virtual environment:
 
@@ -94,9 +93,18 @@ mcp.mount()
 ▶️ Running the Application
 
 Start the FastAPI application using Uvicorn:
-```shell
+
+From the `fastapi-mcp-demo` directory, run:
+```sh
 uvicorn main:app --reload
 ```
+
+Or, if you are in the project root, run:
+```sh
+uvicorn fastapi-mcp-demo.main:app --reload
+```
+
+This will start the server at [http://localhost:8000](http://localhost:8000).
 
 ⸻
 
@@ -171,5 +179,5 @@ mcp-cli --server http://localhost:8000/mcp invoke calculate_bmi weight_kg=70 hei
 
 📚 References
 	•	FastAPI-MCP GitHub Repository: https://github.com/tadata-org/fastapi_mcp
-	•	Shamim Bhuiyan’s Tutorial: Modern AI Integrations: MCP Server Meets REST API and Local LLMs - Part 1
+	•	Shamim Bhuiyan's Tutorial: Modern AI Integrations: MCP Server Meets REST API and Local LLMs - Part 1
 	•	MCP Inspector: https://github.com/modelcontextprotocol/inspector
