@@ -97,15 +97,16 @@ Start the FastAPI application using [uv](https://github.com/astral-sh/uv):
 From the `fastapi-mcp-demo` directory, run:
 ```sh
 uv venv
-uv pip install -e .
+uv sync
 uvicorn main:app --reload
 ```
 
 Or, if you are in the project root, run:
 ```sh
 uv venv
-uv pip install -e ./fastapi-mcp-demo
-uvicorn fastapi-mcp-demo.main:app --reload
+cd fastapi-mcp-demo
+uv sync
+uvicorn main:app --reload
 ```
 
 This will start the server at [http://localhost:8000](http://localhost:8000).
@@ -185,3 +186,35 @@ mcp-cli --server http://localhost:8000/mcp invoke calculate_bmi weight_kg=70 hei
 	•	FastAPI-MCP GitHub Repository: https://github.com/tadata-org/fastapi_mcp
 	•	Shamim Bhuiyan's Tutorial: Modern AI Integrations: MCP Server Meets REST API and Local LLMs - Part 1
 	•	MCP Inspector: https://github.com/modelcontextprotocol/inspector
+
+---
+
+## ⚡️ Why UV?
+
+This project uses [uv](https://github.com/astral-sh/uv) for all Python environment and dependency management. **Do not use pip or venv.**
+
+- `uv` is faster, more reliable, and creates cleaner, reproducible environments.
+- No more `pip install` or `python -m venv`—just use `uv venv` and `uv sync`.
+- This keeps the repository minimal and ensures everyone gets the same setup.
+
+### Quick Start
+
+From the `fastapi-mcp-demo` directory:
+```sh
+uv venv
+uv sync
+uvicorn main:app --reload
+```
+
+Or from the project root:
+```sh
+uv venv
+cd fastapi-mcp-demo
+uv sync
+uvicorn main:app --reload
+```
+
+> **Note for advanced users:** If you want to install in editable mode (for development), you can use:
+> ```sh
+> uv pip install -e .
+> ```
