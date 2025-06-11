@@ -30,7 +30,5 @@ This repository includes a demo project in the `fastapi-mcp-demo` folder, which 
    - Access the MCP manifest at [http://localhost:8000/mcp](http://localhost:8000/mcp).
    - Calculate BMI: [http://localhost:8000/bmi?weight_kg=70&height_m=1.75](http://localhost:8000/bmi?weight_kg=70&height_m=1.75)
 
-> **Note:** For most users, `uv sync` is all you need. Advanced users can use `uv pip install -e .` for editable installs if developing the demo.
-
 ### More Info
 See `fastapi-mcp-demo/README.md` for a detailed walkthrough, architecture, and advanced usage.
