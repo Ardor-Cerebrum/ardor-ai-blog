@@ -92,15 +92,19 @@ mcp.mount()
 
 ▶️ Running the Application
 
-Start the FastAPI application using Uvicorn:
+Start the FastAPI application using [uv](https://github.com/astral-sh/uv):
 
 From the `fastapi-mcp-demo` directory, run:
 ```sh
+uv venv
+uv pip install -e .
 uvicorn main:app --reload
 ```
 
 Or, if you are in the project root, run:
 ```sh
+uv venv
+uv pip install -e ./fastapi-mcp-demo
 uvicorn fastapi-mcp-demo.main:app --reload
 ```
 
